@@ -18,6 +18,6 @@ def upload_file():
    return render_template('index.html')
 
 @app.route('/uploads/')
-def uploaded_file(filaname):
+def uploaded_file(filename):
    return send_from_directory(app.config['UPLOAD_FOLDER'],
          filename, as_attachment=True)
